@@ -9,7 +9,6 @@ public class Main {
     public static void main(String[] args) {
         Database personDB = new Database();
 
-        // Input info for DB by Scanner
         Scanner scan = new Scanner(System.in);
         System.out.println("Input NAME, AGE, Status by spaces:");
         String input1 = scan.nextLine();
@@ -27,12 +26,8 @@ public class Main {
 
         personDB.updatePerson(1, "Luis Torretto", 28, "Available");
 
-        // Printing updated info
         peopleList = personDB.getPeople();
         System.out.println("Updated base: " + peopleList);
-
-
-        //closing connection with DB for security, preventing connection leaks and freeing up resources
 
         personDB.closeConnection();
     }
