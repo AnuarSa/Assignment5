@@ -39,7 +39,7 @@ public class Database {
     // Getting list of people
     public List<Person> getPeople(){
         // creating list for all people
-        List<Animal> people = new ArrayList<>();
+        List<Person> people = new ArrayList<>();
 
         try{
             String query = "SELECT * FROM people";
