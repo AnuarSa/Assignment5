@@ -78,34 +78,6 @@ g
         }
     }
 
-    public void deletePerson(int id){
-        try{
-            String query = "DELETE FROM animals WHERE id=?";
-
-            PreparedStatement preparedStatement = connection.prepareStatement(query);
-            preparedStatement.setInt(1, id);
-            preparedStatement.executeUpdate();
-        } catch (SQLException e){
-            e.printStackTrace();
-        }
-    }
-
-    // CLOSING connection
-    public void closeConnection(){
-        try {
-            // (clearing table) truncate almost the same us DELETE FROM table_name but faster
-            String query = "truncate people";
-            String queryID = "ALTER SEQUENCE animals_id_seq RESTART WITH 1;";
-            PreparedStatement preparedStatement = connection.prepareStatement(query);
-            PreparedStatement preparedStatement1 = connection.prepareStatement(queryID);
-
-            preparedStatement1.executeUpdate();
-            preparedStatement.executeUpdate();
-
-            if (connection != null && !connection.isClosed()){
-                connection.close();
-                System.out.println("CONNECTION WITH DATABASE CLOSED.");
-            }
         } catch (SQLException e){
             e.printStackTrace();
         }
