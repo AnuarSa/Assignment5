@@ -7,7 +7,7 @@ public class Person {
     private String status;
 
 
-    // Constructor for assigning variables
+
     public Person(int id, String name, int age, String status) {
         this.id = id;
         this.name = name;
@@ -15,7 +15,6 @@ public class Person {
         this.status = status;
     }
 
-    // Getters and Setters
     public int getId() {
         return id;
     }
@@ -48,7 +47,6 @@ public class Person {
         this.status = status;
     }
 
-    // Overriding toString for format output
     @Override
     public String toString() {
         return "Person {" +
