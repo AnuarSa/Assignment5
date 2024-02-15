@@ -8,7 +8,6 @@ import java.util.List;
 public class Database {
     private Connection connection;
 
-    // connection from DB to JAVA with jdbc
     public Database() {
         try {
             String url = key.getUrl();
@@ -20,7 +19,7 @@ public class Database {
         }
     }
 
-    // prepearedStatement - the most popular feature for adding/updating some statements as a request for something
+    // prepearedStatement
     public void addPerson (String name, int age, String status) {
         try {
             String query = "INSERT INTO people (name, age, status) VALUES (?, ?, ?, ?)";
@@ -44,7 +43,6 @@ public class Database {
         try{
             String query = "SELECT * FROM people";
 
-            // by statement, I can get values of fields such us "id", "name" and etc
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(query);
             while (resultSet.next()){
