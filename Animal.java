@@ -1,18 +1,16 @@
 package Assignment5;
 
-public class Animal {
+public class Person {
     private int id;
     private String name;
-    private String species;
     private int age;
     private String status;
 
 
     // Constructor for assigning variables
-    public Animal(int id, String name, String species, int age, String status) {
+    public Person(int id, String name, int age, String status) {
         this.id = id;
         this.name = name;
-        this.species = species;
         this.age = age;
         this.status = status;
     }
@@ -34,14 +32,6 @@ public class Animal {
         this.name = name;
     }
 
-    public String getSpecies() {
-        return species;
-    }
-
-    public void setSpecies(String species) {
-        this.species = species;
-    }
-
     public int getAge() {
         return age;
     }
@@ -61,10 +51,9 @@ public class Animal {
     // Overriding toString for format output
     @Override
     public String toString() {
-        return "Animal {" +
+        return "Person {" +
                 "id=" + getId() +
                 ", name='" + getName() + '\'' +
-                ", species='" + getSpecies() + '\'' +
                 ", age=" + getAge() +
                 ", status='" + getStatus() + '\'' +
                 '}';
