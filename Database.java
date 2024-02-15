@@ -5,11 +5,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class AnimalDataAccessObject {
+public class Database {
     private Connection connection;
 
     // connection from DB to JAVA with jdbc
-    public AnimalDataAccessObject() {
+    public Database() {
         try {
             String url = key.getUrl();
             String user = key.getUser();
@@ -20,7 +20,6 @@ public class AnimalDataAccessObject {
         }
     }
 
-    // adding Animals to DB
     // prepearedStatement - the most popular feature for adding/updating some statements as a request for something
     public void addPerson (String name, int age, String status) {
         try {
